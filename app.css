@@ -12,18 +12,6 @@ body {
     background-position-y: -118px;
 }
 
-header {
-    /* width: 300px;
-    margin: 10% auto auto;
-    border: 5px double #d0d0d0;
-    background: #e0e0e0;
-    text-align: center;
-    padding: 10px;
-    box-shadow: 0px 10px 10px #d0d0d0;
-    text-shadow: 0px 0px 2px #000;
-    font-weight: 200px; */
-}
-
 .atm-dispenser {
     width: 55vw;
     max-width: 650px;
@@ -35,8 +23,8 @@ header {
     border-radius: 5px;
     box-shadow: -24px 28px 2px #333;
     position: fixed;
-    left:50%;
-    bottom: 150px;
+    left: 50%;
+    bottom: 135px;
     transform: translateX(-50%);
 }
 
@@ -176,6 +164,14 @@ button#dispense {
     color: #fff;
 }
 
+.divider {
+    width: 100%;
+    background: #ddd;
+    height: 5px;
+    bottom: 145px;
+    position: absolute;
+}
+
 .road {
     width: 118vw;
     height: 154px;
@@ -188,14 +184,42 @@ button#dispense {
     justify-content: center;
     align-items: center;
     transform: skewX(-48deg);
+    box-shadow: 0 0 30px 0 inset rgba(0, 0, 0, .7), 1px 40px 5px 5px rgba(0, 0, 0, .3);
+    background: #333;
+    transform: perspective(403px) rotateX(14deg);
 }
 
 .white-line {
     width: 150px;
     background: #fff;
-    height: 10px;
+    height: 3px;
     margin: 0px 18px;
 }
+
+/* 
+.road {
+	width: 90vw;
+	height: 150px;
+	transform-style: preserve-3d;
+	transform-origin: bottom;
+	transform: perspective(500px) rotateX(60deg);
+	box-shadow: 0 0 30px 0 inset rgba(0, 0, 0, .7),
+		1px 40px 5px 5px rgba(0, 0, 0, .3);
+	background: #333;
+}
+
+.road::after {
+	content: '';
+	display: flex;
+	position: absolute;
+	top: calc((100% - 16px) / 2);
+	left: 5%;
+	width: 90%;
+	height: 16px;
+	background-image: linear-gradient(to right, #FFF 0%, #FFF 70%, #333 70%, #333 100%);
+	background-size: 60px 100%;
+	
+} */
 
 @keyframes coin {
     from {

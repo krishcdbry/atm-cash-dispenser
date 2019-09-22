@@ -1,5 +1,3 @@
-
-
 const moneyConfig = {
     2000 : 0, 500 : 0, 200 : 0, 100 : 0, 50 : 0, 20 : 0, 10 : 0, 5 : 0, 2 : 0, 1 : 0
 }
@@ -18,39 +16,6 @@ let messageTimeout = null;
 function resetMoneyStore() {
     moneyStore = Object.assign({}, moneyConfig);
 }
-
-numberInputs.forEach(item => {
-    item.addEventListener('click', () => {
-        if (disabled) {
-            amountDiv.innerHTML = "PLEASE WAIT";
-            return;
-        }
-        playAudio();
-        let {number} = item.dataset;
-
-        if (number == "cancel") {
-            amount = "";
-            resetMoneyStore();
-            amountDiv.innerHTML = amount;
-            return;
-        }
-        if (number == "clear") {
-            amount = amount.substring(0, amount.length-1);
-            amountDiv.innerHTML = amount; 
-            return;
-        }
-
-        if (number == 0 && amount.length == 0) return;
-        if (amount.length > 10) return;
-
-        amount += number;
-        amountDiv.innerHTML = amount;
-    })
-})
-
-dispense.addEventListener('click', () => {
-    calculator(Number(amount));
-})
 
 function playAudio(dispense, callback) {
     let audio = document.createElement('AUDIO');
@@ -119,4 +84,39 @@ function calculator (n) {
     }
     playAudio("dispense", renderDispenser);
 }
+
+numberInputs.forEach(item => {
+    item.addEventListener('click', () => {
+        if (disabled) {
+            amountDiv.innerHTML = "PLEASE WAIT";
+            return;
+        }
+        playAudio();
+        let {number} = item.dataset;
+
+        if (number == "cancel") {
+            amount = "";
+            resetMoneyStore();
+            amountDiv.innerHTML = amount;
+            return;
+        }
+        if (number == "clear") {
+            amount = amount.substring(0, amount.length-1);
+            amountDiv.innerHTML = amount; 
+            return;
+        }
+
+        if (number == 0 && amount.length == 0) return;
+        if (amount.length > 10) return;
+
+        amount += number;
+        amountDiv.innerHTML = amount;
+    })
+})
+
+dispense.addEventListener('click', () => {
+    calculator(Number(amount));
+})
+
+
 
