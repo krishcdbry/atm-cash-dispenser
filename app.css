@@ -1,0 +1,217 @@
+html, body {
+    margin: 0;
+    padding :0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    background: url(https://image.freepik.com/free-vector/sunset-in-the-city-background_1092-42.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: -118px;
+}
+
+header {
+    /* width: 300px;
+    margin: 10% auto auto;
+    border: 5px double #d0d0d0;
+    background: #e0e0e0;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 10px 10px #d0d0d0;
+    text-shadow: 0px 0px 2px #000;
+    font-weight: 200px; */
+}
+
+.atm-dispenser {
+    width: 55vw;
+    max-width: 650px;
+    margin: 50px auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    border-radius: 5px;
+    box-shadow: -24px 28px 2px #333;
+    position: fixed;
+    left:50%;
+    bottom: 150px;
+    transform: translateX(-50%);
+}
+
+.atm {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 570px;
+    border-right: 2px solid #555;
+    border-style: outset;
+    background: #222;
+    z-index: 10;
+}
+
+.title {
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 10px;
+    font-size: 35px;
+    font-family: 'Saira Stencil One', cursive;
+}
+
+.amount {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    height: 90px;
+    width: 200px;
+    margin: 1px auto;
+    border: 10px solid;
+    border-style: double;
+}
+
+input {
+    width: 70px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    padding: 5px;
+    outline: none;
+    font-family: 15px;
+    padding-left: 15px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 235px;
+}
+
+button {
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    outline: none;
+    margin: 3px;
+    background: #eee;
+}
+
+.keypad {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border: none;
+}
+
+button.number {
+    font-size: 25px;
+}
+
+button#cancel {
+    background: red;
+    font-size: 12px!important;
+}
+
+button#clear {
+    background: yellow;
+    font-size: 12px!important;
+}
+
+button#dispense {
+    background: green;
+    font-size: 12px!important;
+}
+
+.dispense-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+.dispense-summary div {
+    position: relative;
+}
+
+.dispense-summary p {
+    width: 28%;
+    height: 90px;
+    width: 90px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -15px 0px;
+    flex-direction: column;
+    color: #fff;
+    transition: 0.7s all ease-in;
+    animation: coin 1s;
+}
+
+.dispense-summary img {
+    transition: 0.7s all ease-in;
+    animation: coin 1s;
+    margin: -25px 0px;
+}
+
+.dispense-summary span {
+    position: absolute;
+    background: #ccc;
+    color: #000;
+    padding: 3px 8px;
+    border-radius: 0px 5px 5px 0px;
+    /* box-shadow: 2px 4px 6px #000; */
+    top: -13px;
+    left: 0;
+    background: #222;
+    color: #fff;
+}
+
+.road {
+    width: 118vw;
+    height: 154px;
+    position: fixed;
+    bottom: 0;
+    left: -9vw;
+    background: #444;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(-48deg);
+}
+
+.white-line {
+    width: 150px;
+    background: #fff;
+    height: 10px;
+    margin: 0px 18px;
+}
+
+@keyframes coin {
+    from {
+        transform: translateX(-250px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@media (min-width: 780px) {
+    .atm-dispenser {
+        width: 80vw;
+        max-width: 680px;
+    }
+    .atm {
+        width: 350px;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title> ATM Dispenser (INR) </title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css"/>
+</head>
+
+<body>
+
+    <div class="atm-dispenser">
+            <div class="atm">
+                <div class="title">
+                    <div class="header">ATM</div>
+                </div>
+                <div class="money-input">
+                    <div class="amount" id="amount">WELCOME</div>
+                    <br/>
+                    <div class="buttons">
+                            <button class="keypad number" data-number="1">1</button>
+                            <button class="keypad number" data-number="2">2</button>
+                            <button class="keypad number" data-number="3">3</button>
+                            <button class="keypad number" data-number="cancel" id="cancel">CANCEL</button>
+
+                            <button class="keypad number" data-number="4">4</button>
+                            <button class="keypad number" data-number="5">5</button>
+                            <button class="keypad number" data-number="6">6</button>
+                            <button class="keypad number" data-number="clear" id="clear">CLEAR</button>
+
+                            <button class="keypad number" data-number="7">7</button>
+                            <button class="keypad number" data-number="8">8</button>
+                            <button class="keypad number" data-number="9">9</button>
+                            <button class="keypad" id="dispense">ENTER</button>
+
+                            <button class="keypad" >-</button>
+                            <button class="keypad number" data-number="0">0</button>
+                            <button class="keypad" id="input">-</button>
+                            <button class="keypad" id="input">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dispense-summary" id="dispense-summary"></div>
+    </div>
+
+    <div class="road">
+        <div class="white-line">-</div>
+        <div class="white-line">-</div>
+        <div class="white-line">-</div>
+        <div class="white-line">-</div>
+        <div class="white-line">-</div>
+        <div class="white-line">-</div>
+        <div class="white-line">-</div>
+        <div class="white-line">-</div>
+        <div class="white-line">-</div>
+    </div>
+    <div id="sound">
+        
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
