@@ -26,6 +26,7 @@ body {
     left: 50%;
     bottom: 135px;
     transform: translateX(-50%);
+    background-image: linear-gradient(-95deg, #0a4f69, transparent);
 }
 
 .atm {
@@ -195,31 +196,6 @@ button#dispense {
     height: 3px;
     margin: 0px 18px;
 }
-
-/* 
-.road {
-	width: 90vw;
-	height: 150px;
-	transform-style: preserve-3d;
-	transform-origin: bottom;
-	transform: perspective(500px) rotateX(60deg);
-	box-shadow: 0 0 30px 0 inset rgba(0, 0, 0, .7),
-		1px 40px 5px 5px rgba(0, 0, 0, .3);
-	background: #333;
-}
-
-.road::after {
-	content: '';
-	display: flex;
-	position: absolute;
-	top: calc((100% - 16px) / 2);
-	left: 5%;
-	width: 90%;
-	height: 16px;
-	background-image: linear-gradient(to right, #FFF 0%, #FFF 70%, #333 70%, #333 100%);
-	background-size: 60px 100%;
-	
-} */
 
 @keyframes coin {
     from {
